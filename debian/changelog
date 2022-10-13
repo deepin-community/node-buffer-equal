@@ -1,0 +1,35 @@
+node-buffer-equal (1.0.0-3) unstable; urgency=medium
+
+  * Team upload
+
+  [ Debian Janitor ]
+  * Apply multi-arch hints.
+    + node-buffer-equal: Add Multi-Arch: foreign.
+
+  [ Bastien Roucariès ]
+  * Drop nodejs depends
+  * Ship examples
+
+ -- Bastien Roucariès <rouca@debian.org>  Sat, 25 Sep 2021 13:34:28 +0000
+
+node-buffer-equal (1.0.0-2) unstable; urgency=medium
+
+  * Team upload
+  * Declare compliance with policy 4.5.0
+  * Bump debhelper compatibility level to 12
+  * Update VCS fields to salsa
+  * Use pkg-js-tools auto install
+  * Add "Rules-Requires-Root: no"
+  * Change section to javascript
+  * Add debian/gbp.conf
+  * Add upstream/metadata
+  * Fix copyright (add Berne Convention comment)
+  * Enable upstream test using tap
+
+ -- Xavier Guimard <yadd@debian.org>  Mon, 27 Apr 2020 14:25:59 +0200
+
+node-buffer-equal (1.0.0-1) unstable; urgency=low
+
+  * Initial release (Closes: #840916)
+
+ -- Sruthi Chandran <srud@disroot.org>  Sun, 16 Oct 2016 11:05:00 +0530
