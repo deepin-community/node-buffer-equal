@@ -1,7 +1,8 @@
 Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
 Upstream-Name: buffer-equal
-Upstream-Contact: https://github.com/substack/node-buffer-equal/issues
-Source: https://github.com/substack/node-buffer-equal#readme
+Upstream-Contact: https://github.com/inspect-js/node-buffer-equal/issues
+Source: https://github.com/inspect-js/node-buffer-equal#readme
+ https://registry.npmjs.org/@types/buffer-equal
 
 Files: *
 Copyright: 2016 James Halliday <mail@substack.net>
@@ -14,6 +15,10 @@ Comment: The upstream distribution does not contain an explicit statement of
 Files: debian/*
 Copyright: 2016 Sruthi Chandran <srud@disroot.org>
  2020 Yadd <yadd@debian.org>
+License: Expat
+
+Files: types-*/*
+Copyright: Microsoft Corporation
 License: Expat
 
 License: Expat

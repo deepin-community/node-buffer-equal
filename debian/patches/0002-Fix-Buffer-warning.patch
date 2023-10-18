@@ -1,44 +1,61 @@
-From: =?utf-8?q?Bastien_Roucari=C3=A8s?= <rouca@debian.org>
-Date: Sat, 25 Sep 2021 13:42:23 +0000
-Subject: Fix Buffer warning
-
+Description: Fix Buffer warning
+Author: Bastien_Roucariès <rouca@debian.org>
 Forwarded: not-needed
----
- test/eq.js | 10 +++++-----
- 1 file changed, 5 insertions(+), 5 deletions(-)
+Reviewed-By: Yadd <yadd@debian.org>
+Last-Update: 2022-11-10
 
-diff --git a/test/eq.js b/test/eq.js
-index 3d34006..7e565d7 100644
+--- a/example/eq.js
++++ b/example/eq.js
+@@ -3,14 +3,14 @@
+ var bufferEqual = require('buffer-equal');
+ 
+ console.dir(bufferEqual(
+-	new Buffer([253, 254, 255]),
+-	new Buffer([253, 254, 255])
++	Buffer.from([253, 254, 255]),
++	Buffer.from([253, 254, 255])
+ ));
+ console.dir(bufferEqual(
+-	new Buffer('abc'),
+-	new Buffer('abcd')
++	Buffer.from('abc'),
++	Buffer.from('abcd')
+ ));
+ console.dir(bufferEqual(
+-	new Buffer('abc'),
++	Buffer.from('abc'),
+ 	'abc'
+ ));
 --- a/test/eq.js
 +++ b/test/eq.js
-@@ -3,8 +3,8 @@ var test = require('tap').test;
+@@ -5,8 +5,8 @@
  
  test('equal', function (t) {
-     var eq = bufferEqual(
--        new Buffer([253,254,255]),
--        new Buffer([253,254,255])
-+        Buffer.from([253,254,255]),
-+        Buffer.from([253,254,255])
-     );
-     t.strictEqual(eq, true);
-     t.end();
-@@ -12,8 +12,8 @@ test('equal', function (t) {
+ 	var eq = bufferEqual(
+-		new Buffer([253, 254, 255]),
+-		new Buffer([253, 254, 255])
++		Buffer.from([253, 254, 255]),
++		Buffer.from([253, 254, 255])
+ 	);
+ 	t.strictEqual(eq, true);
+ 	t.end();
+@@ -14,8 +14,8 @@
  
  test('not equal', function (t) {
-     var eq = bufferEqual(
--        new Buffer('abc'),
--        new Buffer('abcd')
-+        Buffer.from('abc'),
-+        Buffer.from('abcd')
-     );
-     t.strictEqual(eq, false);
-     t.end();
-@@ -21,7 +21,7 @@ test('not equal', function (t) {
+ 	var eq = bufferEqual(
+-		new Buffer('abc'),
+-		new Buffer('abcd')
++		Buffer.from('abc'),
++		Buffer.from('abcd')
+ 	);
+ 	t.strictEqual(eq, false);
+ 	t.end();
+@@ -23,7 +23,7 @@
  
  test('not equal not buffer', function (t) {
-     var eq = bufferEqual(
--        new Buffer('abc'),
-+        Buffer.from('abc'),
-         'abc'
-     );
-     t.strictEqual(eq, undefined);
+ 	var eq = bufferEqual(
+-		new Buffer('abc'),
++		Buffer.from('abc'),
+ 		'abc'
+ 	);
+ 	t.strictEqual(eq, undefined);

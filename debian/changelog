@@ -1,3 +1,22 @@
+node-buffer-equal (1.0.1+~1.0.0-1) unstable; urgency=medium
+
+  * Team upload
+  * Update standards version to 4.6.1, no changes needed.
+  * Update homepage
+  * New upstream version 1.0.1+~1.0.0
+  * Refresh patches
+  * Update test (tape instead of tap)
+
+ -- Yadd <yadd@debian.org>  Thu, 10 Nov 2022 17:54:32 +0100
+
+node-buffer-equal (1.0.0+~1.0.0-1) unstable; urgency=medium
+
+  * Team upload
+  * Embed typescript declarations and repack
+  * Fix test for tap >= 15 (Closes: #1009518)
+
+ -- Yadd <yadd@debian.org>  Sun, 17 Apr 2022 10:07:03 +0200
+
 node-buffer-equal (1.0.0-3) unstable; urgency=medium
 
   * Team upload

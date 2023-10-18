@@ -1,21 +1,16 @@
-From: =?utf-8?q?Bastien_Roucari=C3=A8s?= <rouca@debian.org>
-Date: Sat, 25 Sep 2021 13:36:42 +0000
-Subject: Fix example
-
-Use global path for example
-
+Description: Fix example
+Author: Bastien_Roucariès <rouca@debian.org>
 Forwarded: not-needed
----
- example/eq.js | 2 +-
- 1 file changed, 1 insertion(+), 1 deletion(-)
+Reviewed-By: Yadd <yadd@debian.org>
+Last-Update: 2022-11-10
 
-diff --git a/example/eq.js b/example/eq.js
-index 1eb0509..05b87e0 100644
 --- a/example/eq.js
 +++ b/example/eq.js
-@@ -1,4 +1,4 @@
+@@ -1,6 +1,6 @@
+ 'use strict';
+ 
 -var bufferEqual = require('../');
 +var bufferEqual = require('buffer-equal');
  
  console.dir(bufferEqual(
-     new Buffer([253,254,255]),
+ 	new Buffer([253, 254, 255]),
